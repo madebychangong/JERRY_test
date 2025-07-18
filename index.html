@@ -1,51 +1,101 @@
-<div style="max-width: 720px; margin: 20px auto; background: linear-gradient(to bottom right, #1a1a1a, #2a002a); border: 3px solid #ff66cc; border-radius: 16px; padding: 30px 24px; font-family: 'Segoe UI', sans-serif; color: #f8f0ff; font-size: 18px; line-height: 1.8; position: relative; text-align: center;">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>홍보물</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="background-color:#000; margin:0; padding:0; font-family: 'Segoe UI', sans-serif; color:#fff;">
 
-  <a href="https://open.kakao.com/o/ssNtK3Bh" target="_blank" style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:10;"></a>
+  <button 
+    onclick="copyHtml()" 
+    style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background-color: #ff66cc; color: #000; font-weight: bold; border: none; border-radius: 8px;
+    padding: 10px 18px; font-size: 16px; cursor: pointer; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.4);"
+  >
+    홍보물 복사
+  </button>
 
-  <div style="position: relative; z-index: 20;">
+  <div id="copyTarget" style="
+    max-width: 720px; margin: 100px auto 40px auto; 
+    background: linear-gradient(to bottom right, #1a1a1a, #2a002a);
+    border: 3px solid #ff66cc; border-radius: 16px; padding: 30px 24px;
+    color: #f8f0ff; font-size: 18px; line-height: 1.8; text-align: center; cursor: pointer;
+    position: relative;
+  "
+  onclick="window.open('https://open.kakao.com/o/ssNtK3Bh', '_blank')">
 
-    <h1 style="font-size: 26px; color: #ff99dd; margin-bottom: 12px;">💜JERRY‘s D4 SHOP💜 S9💜</h1>
+    <!-- 워터마크는 텍스트로만 넣어두기 -->
+    <div style="font-size: 1px; color: transparent; height: 0; overflow: hidden;">madebychangong</div>
+    <div style="font-size: 1px; color: transparent; height: 0; overflow: hidden;">hiddenline</div>
 
-    <!-- '세팅 전문 여기사'와 '풀세팅 패키지' 위치 조정 및 균형 맞춤 --></p>
-    <p style="background: #ff66cc; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">✔ 세팅 전문 여기사</p>
-    <p style="background: #F5ACCD; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">배틀넷</p>
-    <p style="background: #F5ACCD; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">스팀</p>
-    <p style="background: #F5ACCD; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">콘솔</p>
- <hr style="border: none; border-top: 1px dashed #aa88ff; margin: 1px auto; max-width: 600px;">
-    <h2 style="font-size: 20px; margin-bottom: 1px;">💬 1:1 상담 문의 💬</h2>
-    <p style="font-size: 18px; font-weight: bold; color: #ffccff; margin-bottom: 30px; display: inline-block;">
-      배틀태그: nightswimmer#3973<br>
-      <span style="font-size: 17px; font-weight: 600; color: #ff99cc; line-height: 1.6;">
-        ✔️ 모든 작업 개인 수작업 ✔️<br>
-        ✔️ 만족도 100% 신뢰도 100% ✔️<br>
-        ✔️ 단골 다수 보유 여기사 ✔️
-      </span>
-      <hr style="border: none; border-top: 1px dashed #aa88ff; margin: 1px auto; max-width: 600px;">
-    </p>
-     <h2 style="font-size: 22px; color: #ffffff; margin-top: 8px; margin-bottom: 25px;">🤍 풀세팅 패키지 🤍</h2>
-    <div style="text-align: left; max-width: 611px; margin: 0 auto;">
-      <p style="margin-bottom: 10px;">
-        <span style="color:#ff66cc; font-weight:bold;">- 나락 70~80단 이상</span><br>
+    <div style="position: relative; z-index: 20; cursor: default;">
+      <h1 style="font-size: 26px; color: #ff99dd; margin-bottom: 12px;">
+        💜JERRY‘s D4 SHOP💜 S9💜
+      </h1>
+
+      <p style="background: #ff66cc; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">
+        ✔ 세팅 전문 여기사
+      </p>
+      <p style="background: #F5ACCD; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">
+        배틀넷
+      </p>
+      <p style="background: #F5ACCD; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">
+        스팀
+      </p>
+      <p style="background: #F5ACCD; color: #000; display: inline-block; padding: 3px 11px; border-radius: 10px; font-weight: bold; margin: 10px auto; font-size: 19px;">
+        콘솔
+      </p>
+
+      <hr style="border:none; border-top: 1px dashed #aa88ff; margin: 1px auto 20px auto; max-width: 600px;" />
+
+      <h2 style="font-size: 20px; margin-bottom: 1px; color: #ffccff;">
+        💬 1:1 상담 문의 💬
+      </h2>
+      <div style="display: inline-block; padding: 6px 10px; border-radius: 8px; margin-bottom: 20px;">
+        <p style="font-size: 18px; font-weight: bold; color: #ffccff; margin: 0;">
+          배틀태그: nightswimmer#3973<br>
+          <span style="font-size: 17px; font-weight: 600; color: #ff99cc; line-height: 1.6;">
+            ✔️ 모든 작업 개인 수작업 ✔️<br>
+            ✔️ 만족도 100% 신뢰도 100% ✔️<br>
+            ✔️ 단골 다수 보유 여기사 ✔️
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <hr style="border:none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;" />
+
+    <h2 style="font-size: 22px; margin-bottom: 25px; color: #fff;">
+      🤍 풀세팅 패키지 🤍
+    </h2>
+    <div style="text-align: left; max-width: 611px; margin: 0 auto; color: #ff66cc; font-weight: bold;">
+      <p style="margin-bottom: 10px; font-weight: normal; color: #f8f0ff;">
+        <span style="font-weight: bold; color: #ff66cc;">- 나락 70~80단 이상</span><br />
         레벨 60 + 정복자 200 + 문양 70렙 + 1~2 어픽템 + 우버템 + 담금질 + 호라드림 + 명품화 12강
       </p>
 
-      <p>
-        <span style="color:#ff66cc; font-weight:bold;">- 나락 90~100단 이상</span><br>
+      <p style="margin-bottom: 10px; font-weight: normal; color: #f8f0ff;">
+        <span style="font-weight: bold; color: #ff66cc;">- 나락 90~100단 이상</span><br />
         레벨 60 + 정복자 200 + 문양 80렙 + 1~4 어픽템 + 우버템 + 담금질 + 호라드림 + 명품화 12강 (2~3 저격)
       </p>
 
-      <p style="font-size: 16px; color: #ff66cc; font-weight: bold; text-align: reft; margin-top: 8px; margin-bottom: 20px;">
-        우버 원하는 어픽 저격 <span style="font-size: 17px;">추가가능</span><br>
+      <p style="font-size: 16px; margin-top: 8px; margin-bottom: 20px; text-align: left; color: #ff66cc;">
+        우버 원하는 어픽 저격 <span style="font-size: 17px;">추가가능</span><br />
         명망작 및 캠페인 <span style="font-size: 17px;">추가가능</span>
       </p>
     </div>
 
-    <hr style="border: none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;">
+    <hr style="border:none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;" />
 
-    <h2 style="font-size: 20px; color: #ffccff; margin-bottom: 20px;">🎀 빌드 풀세팅 전문 🎀</h2>
-
-    <!-- 빌드 풀세팅 전문: 산뜻한 디자인과 아이콘 적용 (불릿 제거 포함) -->
-    <ul style="list-style: none; padding: 0; margin: 0 auto 40px auto; max-width: 450px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; color: #d8b4ff; font-weight: 600; font-size: 18px; line-height: 1.6; text-align: left;">
+    <h2 style="font-size: 20px; margin-bottom: 20px; color: #ffccff;">
+      🎀 빌드 풀세팅 전문 🎀
+    </h2>
+    <ul style="
+      list-style: none; padding: 0; margin: 0 auto 40px auto; max-width: 450px;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px;
+      color: #d8b4ff; font-weight: 600; font-size: 18px; line-height: 1.6; text-align: left;
+    ">
       <li style="flex: 1 1 calc(50% - 15px); display: flex; align-items: center;">
         <span style="color: #ff99dd; margin-right: 8px; font-size: 1.2em;">💧</span> 원소 | 히드라
       </li>
@@ -66,31 +116,91 @@
       </li>
     </ul>
 
-    <hr style="border: none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;">
+    <hr style="border:none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;" />
 
-    <h2 style="font-size: 20px; color: #cc99ff; margin-bottom: 20px;">✨ BUS LIST ✨</h2>
-    <!-- 불릿 제거 및 내용 가운데 정렬 -->
-    <ul style="list-style: none; padding-left: 0; text-align: left; margin: 0 auto 40px auto; max-width: 600px; color: #f8f0ff; display: inline-block;">
+    <h2 style="font-size: 20px; margin-bottom: 20px; color: #ffccff;">
+      ✨ BUS LIST ✨
+    </h2>
+    <ul style="
+      list-style: none; padding-left: 0; text-align: left; margin: 0 auto 40px auto;
+      max-width: 600px; color: #f8f0ff; display: inline-block;
+    ">
       <li style="margin-bottom: 8px;">🤍 캐릭터 레벨링 (1~300 구간)</li>
       <li style="margin-bottom: 8px;">🤍 문양 레벨링 (1~100)</li>
       <li style="margin-bottom: 8px;">🤍 우버템 파밍 (지정/어픽 저격/벼락불)</li>
       <li style="margin-bottom: 8px;">🤍 명품화 3저격</li>
-      <li>🤍 재료 파밍 (잊힌영혼 1000개 단위)</li>
+      <li style="margin-bottom: 8px;">🤍 재료 파밍 (잊힌영혼 1000개 단위)</li>
     </ul>
 
-    <hr style="border: none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;">
+    <hr style="border:none; border-top: 1px dashed #aa88ff; margin: 30px auto; max-width: 600px;" />
 
-    <h2 style="font-size: 20px; color: #ff99ff; margin-bottom: 20px;">📌 명망작 / 캠페인 / 시즌 퀘스트 📌</h2>
-    <!-- 명망작 내용 및 소요기간 가운데 정렬 -->
-    <div style="display: inline-block; text-align: left; max-width: 600px; margin: 0 auto;">
-      <ul style="list-style: none; padding-left: 0; margin: 0 auto 8px auto; color: #f8f0ff;">
+    <h2 style="font-size: 20px; margin-bottom: 20px; color: #ffccff;">
+      📌 명망작 / 캠페인 / 시즌 퀘스트 📌
+    </h2>
+    <div style="display: inline-block; text-align: left; max-width: 600px; margin: 0 auto 40px auto; color: #f8f0ff;">
+      <ul style="list-style: none; padding-left: 0; margin: 0 auto 8px auto;">
         <li style="margin-bottom: 8px;">✔ 명망작 (전지역 4단계 + 제단)</li>
         <li style="margin-bottom: 8px;">✔ 캠페인 완료</li>
-        <li>✔ 시즌9 퀘스트 (벼락불 획득까지)</li>
+        <li style="margin-bottom: 8px;">✔ 시즌9 퀘스트 (벼락불 획득까지)</li>
       </ul>
-      </p>
-
-      <p style="color: #ff99cc; font-weight: bold; margin-bottom: 40px; font-size: 18px;">
+      <p style="color: #ff99cc; font-weight: bold; margin-top: 0; margin-bottom: 40px; font-size: 18px; user-select: text;">
         배틀태그: nightswimmer#3973
       </p>
     </div>
+
+  </div>
+
+  <script>
+    function copyHtml() {
+      try {
+        // 복사 대상 (#copyTarget) 내부 HTML을 그대로 가져와서
+        // 인라인 스타일이 이미 다 적용되어 있으니 바로 복사
+        const copyTargetHtml = document.getElementById('copyTarget').outerHTML;
+
+        // 전체 HTML 문서로 감싸기
+        const fullHtml = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>홍보물</title>
+</head>
+<body style="background-color:#000; margin:0; padding:0; font-family: 'Segoe UI', sans-serif; color:#fff;">
+${copyTargetHtml}
+</body>
+</html>`.trim();
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(fullHtml).then(() => {
+            alert('복사 완료! 인벤 게시판에 붙여넣으세요.');
+          }).catch(() => fallbackCopy(fullHtml));
+        } else {
+          fallbackCopy(fullHtml);
+        }
+      } catch (e) {
+        alert('복사 실패, 수동 복사 해주세요.');
+        console.error(e);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      textarea.setSelectionRange(0, text.length);
+      try {
+        if (document.execCommand('copy')) {
+          alert('복사 완료! 인벤 게시판에 붙여넣으세요.');
+        } else {
+          alert('복사 기능 지원 안됨, 수동 복사하세요.');
+        }
+      } catch {
+        alert('복사 실패, 수동 복사 해주세요.');
+      }
+      document.body.removeChild(textarea);
+    }
+  </script>
+
+</body>
+</html>
